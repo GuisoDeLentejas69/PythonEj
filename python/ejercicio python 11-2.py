@@ -1,19 +1,14 @@
-def calcular_salario_vendedor(autos_vendidos, valor_unidad):
- 
-    salario_base = 5500
-    
-    comision_por_auto = 200
-    
-    comision_adicional = valor_unidad * 0.05
-    
-    comisiones = (autos_vendidos * comision_por_auto) + (autos_vendidos * comision_adicional)
-    
-    salario_total = salario_base + comisiones
-    
-    return salario_total
+def ejercicio11():
+    moviles = []
+    repeticiones = int(input("Ingrese la cantidad de autos que quiere ingresar"))
+   
+    for i in range(repeticiones):
+         valor = float(input("Ingrese el porcentaje del valor del coche"))
+         moviles.append(valor)    
+   
+   
+    comision = repeticiones * 200
+    bonus = sum(moviles) * 0.05
+    sueldototal = 5500 + comision + bonus
 
-autos_vendidos = int(input("Ingrese el número de autos vendidos: "))
-valor_unidad = float(input("Ingrese el valor de venta de cada unidad: "))
-
-salario_vendedor = calcular_salario_vendedor(autos_vendidos, valor_unidad)
-print(f"El salario total del vendedor es: ${salario_vendedor}")
+    print("El sueldo total es de:  ", sueldototal )
